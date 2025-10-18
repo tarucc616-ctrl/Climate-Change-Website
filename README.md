@@ -152,7 +152,15 @@
       text-decoration: none;
     }
 
-    /* Animations */
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 12px;
+      margin-top: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
     @keyframes fadeInDown {
       0% { opacity: 0; transform: translateY(-20px); }
       100% { opacity: 1; transform: translateY(0); }
@@ -163,7 +171,6 @@
       100% { opacity: 1; transform: translateY(0); }
     }
 
-    /* Responsive */
     @media (max-width: 600px) {
       header h1 {
         font-size: 1.9em;
@@ -173,6 +180,9 @@
       }
       nav a {
         padding: 10px;
+      }
+      iframe {
+        height: 250px;
       }
     }
   </style>
@@ -226,11 +236,6 @@
       <li><strong>Industrial Activities</strong> – Factories and products emit harmful greenhouse gases.</li>
     </ul>
     <p>Everyday human actions — from powering homes to driving cars — add up to massive emissions. Energy production is the largest contributor to global warming, but sustainable alternatives like renewable energy can make a real difference.</p>
-
-    <div class="image-container">
-      <img src="https://cdn.pixabay.com/photo/2016/10/20/18/34/industry-1752876_1280.jpg" alt="Industry pollution at sunset showing factory stacks and air pollution">
-      <p class="image-credit">📸 Photo by <a href="https://pixabay.com/photos/industry-sunrise-sky-air-pollution-1752876/" target="_blank">SD-Pictures</a> on Pixabay</p>
-    </div>
   </section>
 
   <section id="solutions">
@@ -248,6 +253,9 @@
       <img src="https://images.unsplash.com/photo-1506765515384-028b60a970df" alt="People planting trees in a park">
       <p class="image-credit">📸 Photo by <a href="https://unsplash.com/photos/8manzosRGPE" target="_blank">Noah Buscher</a> on Unsplash</p>
     </div>
+
+    <p>For another way to learn and explore climate change, watch this video below:</p>
+    <iframe src="https://www.youtube.com/embed/Sv7OHfpIRfU" title="Climate change (according to a kid)" allowfullscreen></iframe>
   </section>
 
   <section id="about">
