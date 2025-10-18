@@ -1,67 +1,142 @@
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Understanding Climate Change: Facts, Causes, and Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
+    :root {
+      --green: #0d9276;
+      --light-green: #e9f8ef;
+      --text: #333;
+      --bg: #f3faf5;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: 'Poppins', sans-serif;
+      font-family: "Poppins", sans-serif;
       margin: 0;
-      background-color: #f5f9f6;
-      color: #333;
-      line-height: 1.6;
+      padding: 0;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
     }
 
     header {
-      background-color: #2b7a4b;
+      background: linear-gradient(rgba(13, 146, 118, 0.7), rgba(13, 146, 118, 0.7)),
+        url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
       color: white;
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 90px 20px;
+      animation: fadeInDown 1.5s ease;
     }
 
     header h1 {
+      font-size: 2.6em;
       margin: 0;
-      font-size: 2rem;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
     }
 
     nav {
-      background-color: #3b945e;
-      text-align: center;
-      padding: 0.7rem;
+      background: white;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
     nav a {
-      color: white;
+      color: var(--green);
       text-decoration: none;
-      margin: 0 1rem;
-      font-weight: bold;
-      transition: color 0.3s ease;
+      padding: 15px 20px;
+      font-weight: 600;
+      transition: all 0.3s ease;
     }
 
     nav a:hover {
-      color: #c0ffc0;
+      background: var(--green);
+      color: white;
+      border-radius: 8px;
     }
 
     section {
-      padding: 2rem 1rem;
+      padding: 60px 20px;
       max-width: 900px;
       margin: auto;
+      animation: fadeInUp 1s ease;
     }
 
     h2 {
-      color: #2b7a4b;
-      border-left: 5px solid #3b945e;
-      padding-left: 10px;
+      color: var(--green);
+      font-size: 1.8em;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    ul li::before {
+      content: "• ";
+      color: var(--green);
+      font-weight: bold;
+    }
+
+    .cta {
+      background-color: var(--light-green);
+      border-left: 5px solid var(--green);
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+
+    footer {
+      background-color: var(--green);
+      color: white;
+      text-align: center;
+      padding: 25px;
+      font-size: 0.9em;
+      margin-top: 50px;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    a {
+      color: var(--green);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
 
     .image-container {
       text-align: center;
-      margin: 20px 0;
+      margin: 25px 0;
     }
 
     .image-container img {
       width: 100%;
-      max-width: 600px;
+      max-width: 700px;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
@@ -77,42 +152,64 @@
       text-decoration: none;
     }
 
-    footer {
-      background-color: #2b7a4b;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-      font-size: 0.9rem;
+    /* Animations */
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
 
-    footer a {
-      color: #c6ffd6;
-      text-decoration: none;
-      font-weight: bold;
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.9em;
+      }
+      header p {
+        font-size: 1em;
+      }
+      nav a {
+        padding: 10px;
+      }
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Understanding Climate Change: Facts, Causes, and Solutions</h1>
-    <p>Learn what’s happening, why it matters, and how we can make a difference 🌍</p>
+    <h1>Understanding Climate Change</h1>
+    <p>Facts, Causes, and Solutions for a Greener Tomorrow</p>
   </header>
 
   <nav>
+    <a href="#welcome">Home</a>
     <a href="#facts">Facts</a>
     <a href="#causes">Causes</a>
     <a href="#solutions">Solutions</a>
+    <a href="#about">About</a>
+    <a href="#join">Join Us</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <section id="facts">
-    <h2>🌎 What is Climate Change?</h2>
+  <section id="welcome">
+    <h2>Welcome</h2>
     <p>
-      Climate change refers to long-term shifts in temperature, weather patterns, and natural balance on Earth. 
-      Human activities, such as burning fossil fuels and deforestation, have increased greenhouse gases, trapping heat in the atmosphere.
+      Climate change is one of the greatest challenges our world faces — but understanding it is the first step toward a better future.  
+      It’s caused mainly by human activities like burning fuel, cutting down trees, and producing waste. These actions trap heat in our atmosphere, making Earth warmer — a process known as the <strong>greenhouse effect</strong>.
     </p>
+  </section>
+
+  <section id="facts">
+    <h2>What’s Really Happening?</h2>
+    <ul>
+      <li>Global temperatures have risen by about <strong>1.2°C</strong> since the 1800s.</li>
+      <li>Glaciers and ice caps are melting, leading to <strong>rising sea levels</strong>.</li>
+      <li>We’re seeing <strong>stronger storms, longer droughts,</strong> and more unpredictable weather.</li>
+      <li>Oceans are warming, harming coral reefs and marine life.</li>
+    </ul>
+    <p>Scientists around the world agree that these changes are linked to human activity. According to NASA and the IPCC, the last decade has been the hottest in recorded history. These effects threaten wildlife, agriculture, and human health — but it’s not too late to act if we start now.</p>
 
     <div class="image-container">
       <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Melting glacier due to climate change">
@@ -121,11 +218,14 @@
   </section>
 
   <section id="causes">
-    <h2>🔥 Causes of Climate Change</h2>
-    <p>
-      The main causes include carbon emissions from factories, transportation, and power plants. 
-      Deforestation also plays a huge role, as trees help absorb carbon dioxide from the air.
-    </p>
+    <h2>What’s Causing It?</h2>
+    <ul>
+      <li><strong>Burning Fossil Fuels</strong> – Produces carbon dioxide that traps heat.</li>
+      <li><strong>Deforestation</strong> – Fewer trees mean less CO₂ absorption.</li>
+      <li><strong>Farming and Waste</strong> – Livestock and landfills release methane gas.</li>
+      <li><strong>Industrial Activities</strong> – Factories and products emit harmful greenhouse gases.</li>
+    </ul>
+    <p>Everyday human actions — from powering homes to driving cars — add up to massive emissions. Energy production is the largest contributor to global warming, but sustainable alternatives like renewable energy can make a real difference.</p>
 
     <div class="image-container">
       <img src="https://images.unsplash.com/photo-1502303756781-88b39de1f2c4" alt="Factory emitting smoke into the sky">
@@ -134,11 +234,15 @@
   </section>
 
   <section id="solutions">
-    <h2>💡 Solutions and What We Can Do</h2>
-    <p>
-      Small actions make a big difference — use renewable energy, plant trees, reduce plastic use, and support eco-friendly policies.
-      Each effort helps create a cleaner, safer, and more sustainable world for future generations.
-    </p>
+    <h2>What Can We Do About It?</h2>
+    <ul>
+      <li><strong>Use Clean Energy</strong> – Switch to solar, wind, or hydro power.</li>
+      <li><strong>Plant Trees</strong> – Trees clean the air and help cool the planet.</li>
+      <li><strong>Save Energy</strong> – Turn off lights and use energy-efficient appliances.</li>
+      <li><strong>Reduce, Reuse, Recycle</strong> – Cut down on waste and single-use plastics.</li>
+      <li><strong>Spread Awareness</strong> – Talk about climate change; knowledge sparks action!</li>
+    </ul>
+    <p>Communities worldwide are taking action — from banning plastic bags to investing in renewable technologies. Every effort counts. By choosing sustainable habits, we can help protect our planet for generations to come.</p>
 
     <div class="image-container">
       <img src="https://images.unsplash.com/photo-1506765515384-028b60a970df" alt="People planting trees in a park">
@@ -146,25 +250,46 @@
     </div>
   </section>
 
-  <section id="contact">
-    <h2>📬 Contact Us</h2>
+  <section id="about">
+    <h2>About Us</h2>
     <p>
-      We’d love to hear from you! Whether you have questions, ideas, or stories to share about helping the planet, we’re always open to connect.  
+      Welcome to <strong>Understanding Climate Change</strong>, a community built to inform, inspire, and empower people to protect our planet.  
+      Our goal is to make learning about climate change simple and inspiring. Whether you’re a student, teacher, or nature lover, we’re here to help you understand the issue and take action.  
+      Because when we know better — we do better.
     </p>
+  </section>
+
+  <section id="join">
+    <h2>Join Us — Be Part of the Change</h2>
+    <p>You don’t have to be an expert to make a difference — <strong>you just need to start!</strong></p>
     <ul>
-      <li>🌿 <strong>Email:</strong> info@understandingclimatechange.org</li>
-      <li>📱 <strong>Facebook:</strong> @UnderstandingClimateChange</li>
-      <li>📸 <strong>Instagram:</strong> @ClimateChangeAware</li>
-      <li>🐦 <strong>X (Twitter):</strong> @ClimateFactsNow</li>
+      <li>Plant trees in your area.</li>
+      <li>Join local clean-up drives.</li>
+      <li>Save energy at home.</li>
+      <li>Recycle and reuse materials.</li>
+      <li>Inspire others to take eco-friendly actions.</li>
     </ul>
-    <p>Let’s work together to spread awareness, inspire action, and protect the only home we have — <strong>Earth</strong>. 🌏💚</p>
+    <div class="cta">
+      <p>Together, we can create a cleaner, greener, and brighter world.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>We’d love to hear from you! Got questions, ideas, or stories to share? Reach out anytime.</p>
+    <ul>
+      <li><strong>Email:</strong> info@understandingclimatechange.org</li>
+      <li><strong>Facebook:</strong> <a href="#">@UnderstandingClimateChange</a></li>
+      <li><strong>Instagram:</strong> <a href="#">@ClimateChangeAware</a></li>
+      <li><strong>X (Twitter):</strong> <a href="#">@ClimateFactsNow</a></li>
+    </ul>
+    <p>Or send us a message through our <strong>Contact Form</strong> — we’ll get back to you soon.</p>
   </section>
 
   <footer>
-    © 2025 <strong>Understanding Climate Change</strong>. All Rights Reserved.<br>
-    Together, we can make every action count — one small step at a time. 💚  
-    <br>Let’s keep learning, sharing, and caring for our planet for a brighter, cleaner, and greener future. 🌱✨
+    <p>© 2025 <strong>Understanding Climate Change</strong>. All Rights Reserved.</p>
+    <p>Together, we can make every action count — one small step at a time.</p>
+    <p>Let’s protect our planet for a cleaner and brighter future.</p>
   </footer>
-
 </body>
 </html>
