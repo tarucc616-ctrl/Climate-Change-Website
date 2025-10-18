@@ -228,8 +228,8 @@
     <p>Everyday human actions — from powering homes to driving cars — add up to massive emissions. Energy production is the largest contributor to global warming, but sustainable alternatives like renewable energy can make a real difference.</p>
 
     <div class="image-container">
-      <img src="https://images.unsplash.com/photo-1502303756781-88b39de1f2c4" alt="Factory emitting smoke into the sky">
-      <p class="image-credit">📸 Photo by <a href="https://unsplash.com/photos/wX2L8L-fGeA" target="_blank">Chris LeBoutillier</a> on Unsplash</p>
+      <img src="images/causes-pinterest.jpg" alt="Waste, pollution, and deforestation — real-life causes of climate change">
+      <p class="image-credit">📸 Image from Pinterest</p>
     </div>
   </section>
 
